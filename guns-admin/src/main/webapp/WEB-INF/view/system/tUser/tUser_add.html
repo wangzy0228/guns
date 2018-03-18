@@ -1,0 +1,49 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="" underline="true"/>
+                            <#input id="loginName" name="" underline="true"/>
+                            <#input id="loginPassword" name="" underline="true"/>
+                            <#input id="nickName" name="" underline="true"/>
+                            <#input id="realName" name="" underline="true"/>
+                            <#input id="headIcon" name="" underline="true"/>
+                            <#input id="departmentId" name="" underline="true"/>
+                            <#input id="regionId" name="" underline="true"/>
+                            <#input id="createTime" name="" underline="true"/>
+                            <#input id="updateTime" name="" underline="true"/>
+                            <#input id="createUser" name=""/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="updateUser" name="" underline="true"/>
+                            <#input id="status" name="-1：无效，0:审核中，1审核通过" underline="true"/>
+                            <#input id="email" name="" underline="true"/>
+                            <#input id="idNo" name="" underline="true"/>
+                            <#input id="jobId" name="" underline="true"/>
+                            <#input id="phone" name="" underline="true"/>
+                            <#input id="licenseType" name="" underline="true"/>
+                            <#input id="sex" name="" underline="true"/>
+                            <#input id="userType" name="" underline="true"/>
+                            <#input id="salt" name="" underline="true"/>
+                            <#input id="encryQty" name="" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TUserInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TUserInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/tUser/tUser_info.js"></script>
+@}
