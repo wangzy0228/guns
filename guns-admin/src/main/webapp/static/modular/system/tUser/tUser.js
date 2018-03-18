@@ -79,6 +79,23 @@ TUser.openTUserDetail = function () {
 };
 
 /**
+ * 打开查看客户端用户管理详情
+ */
+TUser.openCheck = function () {
+    if (this.check()) {
+        var index = layer.open({
+            type: 2,
+            title: '客户端用户管理详情',
+            area: ['800px', '420px'], //宽高
+            fix: false, //不固定
+            maxmin: true,
+            content: Feng.ctxPath + '/tUser/tUser_check/' + TUser.seItem.id
+        });
+        this.layerIndex = index;
+    }
+};
+
+/**
  * 删除客户端用户管理
  */
 TUser.delete = function () {

@@ -1,0 +1,41 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+
+                            <#input id="loginName" name="登录名称" value="${item.loginName}" underline="true"/>
+                            <#input id="realName" name="真实姓名" value="${item.realName}" underline="true"/>
+                            <#input id="departmentId" name="部门" value="${item.departmentId}" underline="true"/>
+                            <#input id="regionId" name="所在城市" value="${item.regionId}" underline="true"/>
+                            <#input id="createTime" name="ID" value="${item.createTime}" underline="true"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="status" name="状态" value="${item.status}" underline="true"/>
+                            <#input id="email" name="邮箱" value="${item.email}" underline="true"/>
+                            <#input id="idNo" name="证件号" value="${item.idNo}" underline="true"/>
+                            <#input id="jobId" name="职位" value="${item.jobId}" underline="true"/>
+                            <#input id="phone" name="联系方式" value="${item.phone}" underline="true"/>
+                            <#input id="licenseType" name="证件类型" value="${item.licenseType}" underline="true"/>
+                            <#input id="sex" name="性别" value="${item.sex}" underline="true"/>
+
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TUserInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TUserInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/tUser/tUser_info.js"></script>
+@}

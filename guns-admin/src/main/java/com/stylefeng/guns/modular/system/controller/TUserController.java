@@ -53,6 +53,16 @@ public class TUserController extends BaseController {
         LogObjectHolder.me().set(tUser);
         return PREFIX + "tUser_edit.html";
     }
+    /**
+     * 跳转到审核客户端用户管理
+     */
+    @RequestMapping("/tUser_check/{tUserId}")
+    public String tUserCheck(@PathVariable Integer tUserId, Model model) {
+        TUser tUser = tUserService.selectById(tUserId);
+        model.addAttribute("item",tUser);
+        LogObjectHolder.me().set(tUser);
+        return PREFIX + "tUser_check.html";
+    }
 
     /**
      * 获取客户端用户管理列表
